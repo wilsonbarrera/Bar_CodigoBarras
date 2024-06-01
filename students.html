@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Alumnos</h1>
+        </header>
+        <main>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Curso</th>
+                            <th>Deuda</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody> <tr>
+                            <td>001</td>
+                            <td>Juan Pérez</td>
+                            <td>10A</td>
+                            <td>$150000</td>
+                            <td><button onclick="resetDebt('001')">Resetear Deuda</button>
+                            <button onclick="generateStudentReport('001')">Generar Reporte</button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Ana Suarez</td>
+                            <td>6</td>
+                            <td>$29000</td>
+                            <td><button onclick="resetDebt('001')">Resetear Deuda</button>
+                            <button onclick="generateStudentReport('001')">Generar Reporte</button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Juan Pérez</td>
+                            <td>8</td>
+                            <td>$45000</td>
+                            <td><button onclick="resetDebt('001')">Resetear Deuda</button>
+                            <button onclick="generateStudentReport('001')">Generar Reporte</button>
+                        </td>
+                        </tr>
+                        <!-- Más filas según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script>
+        function resetDebt(studentId) {
+            alert('Deuda reseteada para el alumno ' + studentId);
+        }
+
+        function generateStudentReport(studentId) {
+            // Lógica para generar el reporte en PDF (se implementará más adelante)
+            alert('Generar reporte para el alumno ' + studentId);
+        }
+    </script>
+</body>
+</html>
